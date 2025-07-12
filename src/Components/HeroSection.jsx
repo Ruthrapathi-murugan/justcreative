@@ -1,5 +1,5 @@
 import React from 'react';
-import './HeroSection.css'; // For custom styling
+import './heroSection1.css'; // For custom styling
 import desktopHero from '../assets/hero-desktop.jpg'; // Adjust the path as necessary
 import mobileHero from '../assets/hero-mobile2.jpg'; // Adjust the path as necessary
 import logo from '../assets/logo.png';
@@ -49,7 +49,6 @@ const HeroSection = () => {
   <a href="#" className="btn btn-dark">Free Consultation Call</a> 
   <a href="#" className="btn btn-white">Get a Free Quote</a>
 </div>
-
     </div>
 
   );
