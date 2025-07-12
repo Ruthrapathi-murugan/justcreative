@@ -47,7 +47,7 @@ const HeroSection = () => {
           <p className="lead mt-2" style={{paddingLeft:"20px"}}>We, at Just Creative Designs, turn your house into a home with interiors that are stylish, functional, and uniquely yours.</p>
   <div className='buttons d-flex flex-wrap gap-3 mt-3' style={{paddingLeft:"20px"}}>
   <a href="#" className="btn btn-dark">Free Consultation Call</a> 
-  <a href="#" className="btn btn-white">Get a Free Quote</a>
+  <a href="#" className="btn btn-white">Get  a Free Quote</a>
 </div>
     </div>
 
