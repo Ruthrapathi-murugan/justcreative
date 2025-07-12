@@ -1,0 +1,37 @@
+.hero-image-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-white:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.hero-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.hero-text-container {
+  max-width: 90%;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .hero-text-container {
+    top: 60%;
+    text-align: center;
+    color: #000;
+  }
+}
