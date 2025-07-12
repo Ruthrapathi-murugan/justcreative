@@ -1,5 +1,5 @@
 import React from 'react';
-import './heroSection1.css'; // For custom styling
+import './HeroSection.css'; // For custom styling
 import desktopHero from '../assets/hero-desktop.jpg'; // Adjust the path as necessary
 import mobileHero from '../assets/hero-mobile2.jpg'; // Adjust the path as necessary
 import logo from '../assets/logo.png';
