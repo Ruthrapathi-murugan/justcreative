@@ -1,13 +1,19 @@
-import React from 'react';
- // Optional for styling
-import beforeImg from '../assets/before.jpg'; // Replace with actual before image
-import afterImg from '../assets/after.jpg';   // Replace with actual after image
-import interiorImg from '../assets/interior.jpg'; // Optional for bottom image
+import React, { useState } from 'react';
+import interiorImg from '../assets/interior.jpg';
+import beforeImg from '../assets/before.jpg'; // Black & White
+import afterImg from '../assets/after.jpg';   // Color
+import '../Components/StatsSection.css'; // For custom styling
 
 const StatsSection = () => {
+  const [sliderValue, setSliderValue] = useState(50);
+
+  const handleSliderChange = (e) => {
+    setSliderValue(e.target.value);
+  };
+
   return (
     <div className="container py-5">
-      {/* Stats Row */}
+      {/* Stats */}
       <div className="row text-center mb-4">
         <div className="col-md-4">
           <h3>100+</h3>
@@ -24,21 +30,38 @@ const StatsSection = () => {
       </div>
 
       {/* Title + Subtitle */}
-      <div className="text mb-5">
+      <div className="text mb-5 text-center">
         <h4 className="fw-bold">Transforming Spaces, Changing Lives</h4>
         <p className="text-muted">
-          We Elevate ordinary areas to extraordinary spaces, that capture your vision and style.
+          We elevate ordinary areas to extraordinary spaces that capture your vision and style.
         </p>
       </div>
 
-      {/* Image Comparison - Two side-by-side images */}
-      <div className="row justify-content-center mb-5">
-        <div className="col-md-6 mb-3 mb-md-0">
-          <img src={beforeImg} alt="Before" className="img-fluid rounded shadow" />
-        </div>
-        <div className="col-md-6">
-          <img src={afterImg} alt="After" className="img-fluid rounded shadow" />
-        </div>
+      {/* Image Comparison using two different images */}
+      <div className="comparison-container mb-5">
+        {/* BEFORE image (Black & White) on top */}
+        <div
+          className="comparison-image before"
+          style={{
+            clipPath: `inset(0 ${100 - sliderValue}% 0 0)`,
+            backgroundImage: `url(${beforeImg})`,
+          }}
+        ></div>
+
+        {/* AFTER image (Color) in background */}
+        <div
+          className="comparison-image after"
+          style={{ backgroundImage: `url(${afterImg})` }}
+        ></div>
+
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value={sliderValue}
+          onChange={handleSliderChange}
+          className="slider"
+        />
       </div>
 
       {/* Tailored Design Section */}
